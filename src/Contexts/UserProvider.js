@@ -15,12 +15,16 @@ var UserContext = createContext({
 
 var App_User = "APP_USER";
 
+
 const FIREBASE_AUTH_ERRORS = {
   "auth/wrong-password": `Invalid email/password`,
   "auth/user-not-found": `No user found for provided email`,
   "auth/email-already-in-use": "Email already register, do please login",
   "auth/invalid-email": "Please Provide Email/Password",
+  "auth/invalid-login-credentials" : "Invalid Login Attempt"
 };
+
+
 
 var UserProvider = ({ children }) => {
   var localUser = localStorage.getItem(App_User);
