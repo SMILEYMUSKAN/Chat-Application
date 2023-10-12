@@ -3,29 +3,31 @@ import { useUserContext } from "../Contexts/UserProvider";
 import { Redirect } from "react-router-dom";
 
 
-
 var Authentication = ({ isLogin }) => {
   var [email, setEmail] = useState("");
   var [password, setPassword] = useState("");
+ 
 
   var { clearErrors, user, error, doLogin, doSignUp } = useUserContext();
 
   var HandleSubmit = (event) => {
     event.preventDefault();
     (isLogin ? doLogin : doSignUp)(email, password);
+    console.log(user);
   };
 
-  if (user) return <Redirect to="/chats" />;
+  if (user) return <Redirect to="/chatRoom" />;
 
   useEffect(() => {
     clearErrors();
   }, [isLogin]);
 
+
   var title = isLogin ? <h1>Login</h1> : <h1>SignUp</h1>;
   return (
     <div  className="w-5/12 h-96 mt-8 flex flex-col items-center justify-start mx-auto rounded">
+  
       <form onSubmit={HandleSubmit} className="flex flex-col gap-5">
-       
       <h1 className="text-3xl mb-4 text-fuchsia-500 mt-6">{title}</h1>
         {error && <div className="text-red-500">{error}</div>}
         <input
@@ -45,9 +47,12 @@ var Authentication = ({ isLogin }) => {
         />
         <button type="submit" className="bg-fuchsia-500 text-center rounded w-96 p-2 mt-10 mb-4 text-white transition hover:bg-fuchsia-700 shadow">Continue</button>
 
-        
       </form>
+
+  
     </div>
   );
 };
+
+
 export default Authentication;

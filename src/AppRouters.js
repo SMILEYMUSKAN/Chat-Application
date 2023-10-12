@@ -1,15 +1,14 @@
 import { Route, Switch } from "react-router-dom";
-import ChatRoom from "./Components/ChatRoom";
 import Authentication from "./Components/Authentication";
 import HomePage from "./Components/Home";
 import LogOut from "./Components/LogOut";
+import ChatMessage from "./Components/ChatMessage";
 
 var AppRouter = () => {
   return (
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/chats" component={ChatRoom} />
         <Route
           path="/login"
           render={(routerProps) => <Authentication isLogin {...routerProps} />}
@@ -19,6 +18,7 @@ var AppRouter = () => {
           render={(routerProps) => <Authentication {...routerProps} />}
         />
         <Route path="/logout" component={LogOut} />
+        <Route path="/chats" component={ ChatMessage }/>
       </Switch>
     </div>
   );

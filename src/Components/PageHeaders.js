@@ -13,7 +13,7 @@ var PageHeaders = () => {
           {user ? (
             <>
               <p>{user.email}</p>
-              <PageLinks to="/chats" className="transition hover:text-white" >Chat Rooms</PageLinks>
+              <PageLinks to="/chats" className="transition hover:text-white">Chats</PageLinks>
               <PageLinks to="/logout" className="transition hover:text-white">LogOut</PageLinks>
             </>
           ) : (
