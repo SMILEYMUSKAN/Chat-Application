@@ -23,7 +23,7 @@ var ChatMessage = () => {
   var MessagesCollection = collection(database, "ChatApp");
   var MessagesQuery = query(
     MessagesCollection,
-    where("roomName", "==", room),
+    where("userEmail", "==", user.email),
     orderBy("createdAt", "asc")
   );
 
@@ -62,22 +62,32 @@ var ChatMessage = () => {
   };
 
   return (
-    <section className="SectionUI">
+    <section className="ParentUI">
       <ChatRoom />
-      <div className="ChatMessagesUI">
-        <form onSubmit={HandleSubmit}>
-          <div>
+      <div id="ChatMessageUI">
+        <form onSubmit={HandleSubmit} id="ChatMessageFormUI">
+  
+          <div className="ChatMessageMessagesUI">
             {firestoreMessages.map((info, idx) => (
-              <h1 key={idx}>{info.messages}</h1>
+              <div key={idx}>
+                 <p>{info.userEmail}</p>
+                 <p>{info.createdAt}</p>
+                <h1>{info.messages}</h1>
+               
+              </div>
             ))}
           </div>
+          <section className="FormSectionChatMessagesUI">
           <input
             type="text"
             placeholder="Type Your Message Here..."
             onChange={HandleOnChange}
             value={newMessage}
+            className="ChatMessageInputUI"
           />
-          <button type="submit">Send</button>
+          <button type="submit" className="ChatMessageButtonUI">Send</button>
+         
+          </section>
         </form>
       </div>
     </section>

@@ -52,37 +52,37 @@ var ChatRoom = () => {
         setRoomsNames(RoomsInDb);
       })
       .catch((error) => console.log(error));
-  }, [user.email]);
+  }, [room, user.email]);
 
   return (
-    <div>
-      <div className="ScrollBarUI">
+    <div className="ChatRoomUI">
+
         <form onSubmit={HandleOnSubmitEvent}>
-          <h1 className="HeadingUI">Create Your Room Here</h1>
-          <header className="ScrollBarHeader">
+          
+          <header className="ChatRoomHeaderUI">
             <input
               type="text"
               onChange={HandleOnChangeEvent}
               value={room}
-              placeholder="Room Name"
-              className="ScrollBarInput"
+              placeholder="Create Your Room Here"
+              className="ChatRoomInput"
             />
-            <button
+           {room ?  <button
               onClick={HandleOnClickEvent}
               type="submit"
-              className="ScrollBarButtonUI"
+              className="ChatRoomButton"
             >
-              {" "}
-              Create{" "}
-            </button>
-            <div>
+              Create
+            </button> : <button className="ChatRoomButton" onClick={() => <h1 style={{color:"red"}}>Please Enter Room Name</h1>}>Create</button>}
+            </header>
+           <div>
               {roomsNames.map((dbData, idx) => (
-                <p key={idx}>{dbData.roomName}</p>
+                <p key={idx} className="RoomNamesUI">{dbData.roomName}</p>
               ))}
             </div>
-          </header>
+          
         </form>
-      </div>
+
     </div>
   );
 };
