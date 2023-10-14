@@ -4,119 +4,111 @@
 
 }
 
-.ParentUI{
-    display: flex;
+.HomePage{
+ min-width:  80em;
+ max-width: 1000em;
+ min-height: 36.65em;
+ max-height: 1000em;
+ display: flex;
 }
 
 .ChatRoomUI{
- flex: 0.80;
- min-height: 36.70em;
- max-height: 500em;
- border: 1px solid rgb(128, 12, 75);
+  min-width: 23em;
+  background-color:rgb(185, 43, 185) ;
 }
 
-.ChatRoomHeaderUI{
+.chatMessagesUI{
+width: 66em;
+
+}
+
+.MessagesSectionUI{
+  min-height: 33.40em;
+  max-height: max-content;
+  background-color: rgb(253, 112, 253);
+}
+
+.FormSection{
   display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
- border-bottom: 1px solid rgb(128, 12, 75);
+  gap:2em;
+  background-color: rgb(114, 18, 114);
+  min-height: 3.30em;
+  flex-shrink: 0;
 }
 
+.InputUI{
+ height: 2.20em;
+ flex: 2;
+ margin-top: 10px;
+ margin-left: 30px;
+ border-radius: 8px;
+ padding-left: 35px;
+ background-color: rgb(194, 49, 194);
+ border-bottom: 1px solid fuchsia;
+ color:white;
+}
 
-.ChatRoomInput:focus{
-    outline: none;
-  }
+.InputUI:focus{
+  outline: none;
+}
+
+.ButtonUI{
+ flex: 0.40;
+ background-color: rgb(194, 49, 194);
+ height: 2.50em;
+ margin-top: 8px;
+ margin-right: 10px;
+ border-radius: 8px;
+ color: white;
+}
+
+.ButtonUI:hover{
+  border: 1px solid fuchsia;
+  transition: border 1s;
+}
+
+.NavSection{
+  padding: 15px;
+
+}
+
+.ChatRoomForm{
+  display: flex;
+  justify-content: space-around;
+  gap:1em;
+}
 
 .ChatRoomInput{
-    flex : 0.70;
-    padding: 5px;
-    padding-left: 35px;
-    border: 1px solid silver;
-    border-radius: 8px;
-   }
+  flex: 2;
+  border-radius: 8px;
+  padding: 5px;
+  padding-left: 35px;
+  background-color: rgb(247, 194, 247);
+  border-bottom: 1px solid fuchsia;
+}
 
-   .ChatRoomInput:focus {
-    border: 1px solid fuchsia;
-    transition: border 1s;
-    box-shadow: 1px 1px 1px grey;
-
-   }
+.ChatRoomInput:focus{
+  outline: none;
+}
 
 .ChatRoomButton{
-    flex:0.20;
-    border:1px solid silver;
-    border-radius: 8px;
+ flex: 1;
+ border-radius: 8px;
+ background-color: rgb(247, 194, 247);
+ color: black;
 }
 
 .ChatRoomButton:hover{
-   border: 1px solid fuchsia;
-    transition: border 1s;
-    box-shadow: 1px 1px 1px grey;
-}
-  
-.RoomNamesUI{
-    margin: 1em;
-    padding: 10px;
-    border-radius: 8px;
-    padding-left: 1em;
-    font-size: 20px;
-    cursor: pointer;
-    border: 1px solid silver;
+  box-shadow: 1px 1px 1px black;
+  border: 1px solid white;
+  transition: all 1s;
 }
 
-.RoomNamesUI:hover{
-    border: 1px solid fuchsia;
-    transition: border 1s;
-    box-shadow: 1px 1px 1px grey;
-}
-
-
-#ChatMessageUI{
-    flex:2;
-    height: 36.70em;
-
-}
-
-
-#ChatMessageFormUI{
-    display: flex;
-    flex-direction: column;
- 
-}
-
-.ChatMessageMessagesUI{
- min-width: 100% ;
- min-height: 32em;
- max-height: 400em;
-}
-
-.FormSectionChatMessagesUI{
- min-width: 100%;
- min-height:3em;
- display: flex;
- gap:20px;
- flex-shrink: 0;
-}
-
-.ChatMessageInputUI{
-    flex:3;
-    margin-left: 15px;
-    border-bottom: 1px solid fuchsia;
-    padding-left: 35px;
-}
-
-.ChatMessageInputUI:focus{
-    outline: none;
-}
-.ChatMessageButtonUI{
-    flex:1;
-    margin-right: 15px;
-    border: 1px solid fuchsia;
-    border-radius: 8px;
-    color:fuchsia;
-}
-
-.ChatMessageButtonUI:hover{
-    background-color: rgb(240, 229, 229);
-    box-shadow: 1px 1px 1px grey;
+.ChatMessageFalseUI{
+  background-color: rgb(253, 112, 253);
+  width: 66em;
+  text-align: center;
+  padding-top: 9em;
+  font-size: 30px;
+  color:white
 }

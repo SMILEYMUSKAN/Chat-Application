@@ -1,7 +1,12 @@
+import ChatMessages from "./ChatMessages";
+import ChatRooms from "./ChatRooms";
+import "../App.css";
+
 var HomePage = () => {
     return (
-      <div>
-        <h1>Welcome To Home Page</h1>
+      <div className="HomePage">
+        <ChatRooms />
+        <ChatMessages />
       </div>
     );
   };

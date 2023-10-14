@@ -5,7 +5,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 
-import { auth } from "../FirebaseApp";
+import { auth } from "../FireBaseApp";
 
 
 var UserContext = createContext({

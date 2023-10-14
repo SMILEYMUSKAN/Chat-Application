@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import Authentication from "./Components/Authentication";
 import HomePage from "./Components/Home";
 import LogOut from "./Components/LogOut";
-import ChatMessage from "./Components/ChatMessage";
+
 
 var AppRouter = () => {
   return (
@@ -18,7 +18,6 @@ var AppRouter = () => {
           render={(routerProps) => <Authentication {...routerProps} />}
         />
         <Route path="/logout" component={LogOut} />
-        <Route path="/chats" component={ ChatMessage }/>
       </Switch>
     </div>
   );
