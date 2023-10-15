@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import { database } from "../FireBaseApp";
 import { useUserContext } from "../Contexts/UserProvider";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 var ChatMessages = () => {
   var [Messages, setMessages] = useState("");
@@ -32,10 +33,13 @@ var ChatMessages = () => {
     addDoc(ChatsCollection, saveChats)
       .then((DOC) => {
         setMessages("");
-        console.log(":: SUCCESS ::", DOC);
       })
       .catch((error) => console.log(":: Error ::", error));
   };
+  
+  useEffect(() => {
+    setChat([])
+  }, [user.email])
 
   useEffect(() => {
     var DbQuery = query(
@@ -51,10 +55,9 @@ var ChatMessages = () => {
           ChatInfoDb.push({ ...ChatRoomData, id: doc.id });
         });
         setChat(ChatInfoDb);
-        console.log("Success");
       })
       .catch((err) => console.log(err));
-  }, [name]);
+  }, [chat]);
 
   var HandleChangeEvent = (event) => {
     var {
@@ -63,6 +66,7 @@ var ChatMessages = () => {
     setMessages(value);
   };
 
+  if(room == "") return <Redirect to="/room"/>
   return (
     <div className="ChatMessagesUI">
       <form onSubmit={HandleSubmitEvent} className="FromUI">
@@ -86,9 +90,13 @@ var ChatMessages = () => {
             placeholder="Type a message"
             value={Messages}
           />
-          <button className="ButtonUI" type="submit">
+          {Messages ? <button className='ButtonUI' type="submit">
             Send
-          </button>
+          </button> : <button className='ButtonUI' type="submit" disabled={true}>
+            Send
+          </button>}
+          
+          
         </section>
       </form>
     </div>

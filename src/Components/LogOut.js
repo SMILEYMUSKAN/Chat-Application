@@ -10,7 +10,6 @@ var LogOut = () => {
     LogOut();
     localStorage.clear();
     history.push("/login");
-    console.log("I'M From useEffect");
   }, []);
 
   return null;

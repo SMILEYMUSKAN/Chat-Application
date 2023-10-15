@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { Redirect } from "react-router-dom";
 import { useRoomContext } from "../Contexts/RoomProvider";
 
 var chatRoom = () => {
-  var { HandleOnSubmit, HandleOnChange, room, HandleOnChangeName, name } =
+  var { HandleOnSubmit, HandleOnChange, room, HandleOnChangeName, name, toggle } =
     useRoomContext();
 
+  
+  if(toggle) return <Redirect to="/chats"/>
   return (
     <div className="w-5/12 h-96 mt-8 flex flex-col items-center justify-start mx-auto rounded">
       <form onSubmit={HandleOnSubmit} className="flex flex-col gap-5">

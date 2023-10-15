@@ -36,7 +36,7 @@ var UserProvider = ({ children }) => {
   var SaveUser = (res) => {
     localStorage.setItem(App_User, JSON.stringify(res));
     setUser(res);
-    history.push("/chatRoom");
+    history.push("/room");
   };
 
 

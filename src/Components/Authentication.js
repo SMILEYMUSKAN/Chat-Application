@@ -13,10 +13,10 @@ var Authentication = ({ isLogin }) => {
   var HandleSubmit = (event) => {
     event.preventDefault();
     (isLogin ? doLogin : doSignUp)(email, password);
-    console.log(user);
+
   };
 
-  if (user) return <Redirect to="/chatRoom" />;
+  if (user) return <Redirect to="/room" />;
 
   useEffect(() => {
     clearErrors();

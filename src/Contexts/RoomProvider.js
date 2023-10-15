@@ -6,11 +6,14 @@ var RoomContext = createContext({});
 var RoomProvider = ({ children }) => {
   var [room, setRoom] = useState("");
   var [name, setName] = useState("");
+  var [toggle, setToggle] = useState(false);
 
   var history = useHistory();
+  
 
   var HandleOnSubmit = (event) => {
     event.preventDefault();
+    setToggle(true);
     history.push("/chats");
   };
 
@@ -37,6 +40,7 @@ var RoomProvider = ({ children }) => {
         name,
         room,
         setRoom,
+        toggle
       }}
     >
       {children}
