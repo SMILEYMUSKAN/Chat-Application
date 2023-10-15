@@ -1,8 +1,9 @@
 import { Route, Switch } from "react-router-dom";
 import Authentication from "./Components/Authentication";
-import HomePage from "./Components/Home";
+import HomePage from "./Components/HomePage";
 import LogOut from "./Components/LogOut";
-
+import ChatMessages from "./Components/ChatMessages";
+import chatRoom from "./Components/ChatRoom";
 
 var AppRouter = () => {
   return (
@@ -18,6 +19,8 @@ var AppRouter = () => {
           render={(routerProps) => <Authentication {...routerProps} />}
         />
         <Route path="/logout" component={LogOut} />
+        <Route path="/chats" component={ChatMessages} />
+        <Route path="/room" component={chatRoom} />
       </Switch>
     </div>
   );
