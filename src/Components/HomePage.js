@@ -1,8 +1,12 @@
 import { Redirect } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import { useUserContext } from "../Contexts/UserProvider";
+
 
 var HomePage = () => {
   var history = useHistory();
+  var { user } = useUserContext();
+  
   var OnClickLoginHandler = () => {
     history.push("/login");
   };
@@ -12,7 +16,7 @@ var HomePage = () => {
   };
 
   if(user) return <Redirect to="/room"/>
-  
+
   return (
     <div>
       <h1 className="HomePageUI">Chit && Chat</h1>
