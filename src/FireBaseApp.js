@@ -9,13 +9,14 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB9CEjFcbzzBlupdAZRKhXLv-PbHLMhpIY",
-  authDomain: "chit-chat-7c9a3.firebaseapp.com",
-  projectId: "chit-chat-7c9a3",
-  storageBucket: "chit-chat-7c9a3.appspot.com",
-  messagingSenderId: "67357108447",
-  appId: "1:67357108447:web:c6aa94c4788c425bb2616a"
+  apiKey: "AIzaSyDXDBYIaEwMu7WxufE3gfvKSFW8D4Z_oLM",
+  authDomain: "chitchat-d3a54.firebaseapp.com",
+  projectId: "chitchat-d3a54",
+  storageBucket: "chitchat-d3a54.appspot.com",
+  messagingSenderId: "538861477757",
+  appId: "1:538861477757:web:35cd47a1944b24bc91b614"
 };
+
 
 // Initialize Firebase
 const FireBaseApp = initializeApp(firebaseConfig);
