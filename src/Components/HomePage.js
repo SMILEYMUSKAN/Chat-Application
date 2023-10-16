@@ -22,23 +22,23 @@ var HomePage = () => {
       <h1 className="HomePageUI">Chit && Chat</h1>
       <section className="ButtonSectionUI">
         <button
-          className="bg-fuchsia-500 text-white text-lg p-1 m-2 w-24 rounded hover:bg-fuchsia-600 shadow transition"
+          className="ButtonOne"
           onClick={OnClickLoginHandler}
         >
           Login
         </button>
         <button
-          className="bg-fuchsia-500 text-white text-lg p-1  w-24 rounded hover:bg-fuchsia-600 shadow transition"
+          className="ButtonTwo"
           onClick={OnClickSignUpHandler}
         >
           SignUp
         </button>
       </section>
-      <p className="text-fuchsia-500 text-md mt-4 text-center">
+      <p className="ParaUIHomePage">
         Do Login or signUp to start conversation
       </p>
       <footer>
-        <p className="text-fuchsia-500 text-md text-center mt-48">
+        <p className="FooterUIHomePage">
           &copy;2023 Smiley Muskan.All rights reserved
         </p>
       </footer>

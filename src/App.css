@@ -1,159 +1,411 @@
 .AppMainUI{
-        width: 100vw;
-        height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
 }
 .ChatMessagesUI{
-  border: 1px solid rgb(168, 9, 168);
-  width: 70vw;
-  height: 91vh;
-  margin: auto;
-  background-color:rgb(168, 9, 168);
-  border-radius: 12px;
-  margin-top: 2px;
-  box-shadow: 1px 1px 2px black;
-  position: relative;
+border: 1px solid rgb(168, 9, 168);
+width: 70vw;
+height: 91vh;
+margin: auto;
+background-color:rgb(168, 9, 168);
+border-radius: 12px;
+margin-top: 2px;
+box-shadow: 1px 1px 2px black;
+position: relative;
 }
 
 .FromUI{
-  width: 55vw;
-  height: 85vh;
-  border: 1px solid white;
-  margin: auto;
-  margin-top: 1em;
-  border-radius: 8px;
-  background-color: white;
-  scrollbar-width: thin;
-  position: relative;
+width: 55vw;
+height: 85vh;
+border: 1px solid white;
+margin: auto;
+margin-top: 1em;
+border-radius: 8px;
+background-color: white;
+scrollbar-width: thin;
+position: relative;
 }
 
 .FormItemsUI{
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  gap:1em;
-  margin-bottom: 25px;
-  position:fixed;
+position: absolute;
+bottom: 0;
+display: flex;
+gap:1em;
+margin-bottom: 25px;
+position:fixed;
 }
 
 .InputUI{
- padding: 5px; 
- width: 40vw;
- margin-left: 20px;
- padding-left: 35px;
- border: 1px solid rgb(168, 9, 168);
- border-radius: 8px;
+padding: 5px; 
+width: 40vw;
+margin-left: 20px;
+padding-left: 35px;
+border: 1px solid rgb(168, 9, 168);
+border-radius: 8px;
 }
 
 .InputUI:focus{
-  outline: none;
+outline: none;
 }
 
 .ButtonUI{
-  background-color: rgb(168, 9, 168);
-  width: 10vw;
-  border-radius: 8px;
-  margin-right: 10px;
-  color:white;
+background-color: rgb(168, 9, 168);
+width: 10vw;
+border-radius: 8px;
+margin-right: 10px;
+color:white;
 }
 
 
 .ButtonUI:hover{
-  background-color:rgb(199, 31, 199);
-  box-shadow: 1px 1px 1px grey;
-  transition: all 1s;
+background-color:rgb(199, 31, 199);
+box-shadow: 1px 1px 1px grey;
+transition: all 1s;
 }
 
 .ChatSpanUI{
-  margin : 1em;
-  margin-left: 1em;
-  display: flex;
-  width:50vw;
-  min-height: 75vh;
-  max-height: 1000vh;
-  flex-direction: column;
-  position: relative;
+margin : 1em;
+margin-left: 1em;
+display: flex;
+width:50vw;
+min-height: 75vh;
+max-height: 1000vh;
+flex-direction: column;
+position: relative;
 
 }
 
 .MessagesUI{
-  display: flex;
-  flex-wrap: wrap;
-  width: fit-content;
-  margin-bottom: 1em;
-  padding: 10px;
-  position: relative;
+display: flex;
+flex-wrap: wrap;
+width: fit-content;
+margin-bottom: 1em;
+padding: 10px;
+position: relative;
 }
 
 .MessagesSpanUI{
-  border: 1px solid rgb(168, 9, 168);
-  width: fit-content;
-  border-radius: 0px 10px 10px 20px;
-  text-align: center;
-  padding-top: 20px;
-  padding: 5px;
+border: 1px solid rgb(168, 9, 168);
+width: fit-content;
+border-radius: 0px 10px 10px 20px;
+text-align: center;
+padding-top: 20px;
+padding: 5px;
 }
 
 .MessagesSpanUIUser{
-  border: 1px solid rgb(168, 9, 168);
-  width: fit-content;
-  border-radius: 10px 0px 10px 10px;
-  text-align: center;
-  padding-top: 20px;
-  padding: 5px;
-  position: absolute;
-  right: 0;
-  margin-top: 1em;
+border: 1px solid rgb(168, 9, 168);
+width: fit-content;
+border-radius: 10px 0px 10px 10px;
+text-align: center;
+padding-top: 20px;
+padding: 5px;
+position: absolute;
+right: 0;
+margin-top: 1em;
 }
 
 .CreatedAt{
-  font-size: 10px;
-  margin-top: 3.50em;
-  color: rgb(168, 9, 168);
-  margin-left: 5px;
+font-size: 10px;
+margin-top: 3.50em;
+color: rgb(168, 9, 168);
+margin-left: 5px;
 }
 
 .CreatedAtUser{
-  font-size: 10px;
-  margin-top: 5.50em;
-  margin-left: 55em;
-  color: rgb(168, 9, 168);
+font-size: 10px;
+margin-top: 5.50em;
+margin-left: 55em;
+color: rgb(168, 9, 168);
 }
 
 .RoomNameUI{
-  text-align: center;
-  font-size: 25px;
-  color:rgb(168, 9, 168);
-  margin-top: 10px;
+text-align: center;
+font-size: 25px;
+color:rgb(168, 9, 168);
+margin-top: 10px;
 }
 
 .userNameUI{
-  color:rgb(168, 9, 168)
+color:rgb(168, 9, 168)
 }
 
 .AnotherUsers{
- position: absolute;
- right: 0;
- color:rgb(168, 9, 168);
- 
+position: absolute;
+right: 0;
+color:rgb(168, 9, 168);
+
 }
 .HomePageUI{
-  text-align: center;
-  font-size: 60px;
-  color:rgb(168, 9, 168);
-  margin-top: 2em;
+text-align: center;
+font-size: 60px;
+color:rgb(168, 9, 168);
+margin-top: 2em;
 }
 
 .ButtonSectionUI{
-  margin-left: 36em;
-  margin-top: 2em;
+margin-left: 36em;
+margin-top: 2em;
 }
 
 #outer{
-  overflow: hidden;
+overflow: hidden;
 }
 
 #inner{
-  overflow-y: auto;
+overflow-y: auto;
 }
 
+
+.ButtonOne{
+background-color: rgb(192, 7, 192);
+color: white;
+font-size: 18px;
+padding: 4px;
+width: 96px;
+margin: 8px;
+border-radius: 8px;
+line-height:28px;
+}
+
+.ButtonOne:hover{
+background-color: rgb(212, 28, 212);
+transition: all 0.50s;
+box-shadow: 1px 1px 1px black;
+}
+
+.ButtonTwo{
+background-color: rgb(192, 7, 192);
+color: white;
+font-size: 18px;
+padding: 4px;
+width: 96px;
+margin: 8px;
+border-radius: 8px;
+line-height:28px;
+}
+
+.ButtonTwo:hover{
+background-color: rgb(212, 28, 212);
+transition: all 0.50s;
+box-shadow: 1px 1px 1px black;
+}
+
+.ParaUIHomePage{
+color:rgb(192, 7, 192);
+font-size: 15px;
+margin-top: 16px;
+text-align: center;
+}
+
+.FooterUIHomePage{
+color:rgb(192, 7, 192);
+font-size: 15px;
+text-align: center;
+margin-top: 192px;
+}
+
+.MainDivPageHeaders{
+  background-color: darkmagenta;
+  padding: 4px;
+}
+
+.MainHeaderPageHeader{
+ display: flex;
+ width: 100%;
+ justify-content: space-between;
+}
+
+.PageHomeLinkUI{
+  margin: 8px;
+  color: rgb(231, 170, 231);
+  font-style: italic;
+  font-size: 24px ;
+line-height: 32px;
+}
+
+.PageHomeLinkUI:hover{
+  cursor: pointer;
+  color: white;
+  transition: all 0.50s;
+}
+.NavPageHeaderUI{
+  display: flex;
+  color:rgb(231, 170, 231);
+  font-style: italic;
+  flex-wrap: wrap;
+  margin: 8px;
+  gap: 16px;
+
+}
+
+.NavPageHeaderUI:hover{
+  cursor: pointer;
+}
+
+.PageLinksUI:hover{
+  color:white;
+  transition: all 0.50s;
+}
+
+.AuthenticationMainDiv{
+  width: 41.666667%;
+  height: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: auto;
+  border-radius: 8px;
+  margin-top: 4em;
+}
+
+.AuthFormUI{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.AuthHeaderUI{
+  font-size:  30px ;
+  line-height: 36px ;
+  color: rgb(224, 47, 224);
+}
+
+.AuthErrUI{
+  color: red;
+}
+
+.AuthNameInputUI{
+  padding-bottom: 16px;
+  padding-top: 8px;
+  width:384px;
+  border-bottom:2px solid rgb(224, 47, 224);
+  background-color: white;
+ 
+}
+.AuthNameInputUI:focus{
+  outline: none;
+}
+
+.AuthSubmitButtonUI{
+  background-color: rgb(224, 47, 224);
+  text-align: center;
+  border-radius: 8px;
+  width: 384px;
+  padding: 8px;
+  margin-bottom: 16px;
+  margin-top: 40px;
+  color: white;
+}
+
+.AuthSubmitButtonUI:hover{
+  background-color:rgb(179, 39, 179);
+  transition: all 0.50s;
+}
+
+/*bg-fuchsia-500 text-center rounded w-96 p-2 mt-10 mb-4 text-white transition hover:bg-fuchsia-700 shadow*/
+/*
+4-16px
+2-8px
+96-384px
+10-40px
+*/
+@media screen and (max-width: 567px){
+.HomePageUI{
+font-size: 40px;
+margin-top: 4em;
+}
+
+.ButtonSectionUI{
+margin-left: 6em;
+}
+
+.ButtonOne{
+background-color: rgb(192, 7, 192);
+color: white;
+font-size: 14px;
+padding: 6px;
+width: 85px;
+margin: 2px;
+border-radius: 8px;
+line-height:20px;
+}
+
+.ButtonTwo{
+  background-color: rgb(192, 7, 192);
+  color: white;
+  font-size: 14px;
+  padding: 6px;
+  width: 85px;
+  margin: 2px;
+  border-radius: 8px;
+  line-height:20px;
+  }
+  
+  .ButtonOne:hover{
+    background-color: rgb(212, 28, 212);
+    transition: all 0.50s;
+    box-shadow: 1px 1px 1px black;
+    }
+
+   .ButtonTwo:hover{
+      background-color: rgb(212, 28, 212);
+      transition: all 0.50s;
+      box-shadow: 1px 1px 1px black;
+      }
+    .FooterUIHomePage{
+      color:rgb(192, 7, 192);
+      font-size: 13px;
+      text-align: center;
+      margin-top: 11em;
+    }
+    .MainDivPageHeaders{
+      padding: 6px;
+    }
+    .PageHomeLinkUI{
+      margin: 4px;
+      font-style: 20px;
+      line-height: 30px;
+      margin-left: 5em;
+      
+    }
+
+    .NavPageHeaderUI{
+      display: none;
+    }
+
+    
+  .AuthHeaderUI{
+  font-size:  20px ;
+  line-height: 30px ;
+  color: rgb(224, 47, 224);
+}
+
+.AuthenticationMainDiv{
+  margin: auto;
+  margin-top: 5em;
+}
+
+.AuthNameInputUI{
+  padding-bottom: 16px;
+  padding-top: 8px;
+  width:300px;
+  border-bottom:2px solid rgb(224, 47, 224);
+  background-color: white;
+ 
+}
+
+.AuthSubmitButtonUI{
+  background-color: rgb(224, 47, 224);
+  text-align: center;
+  border-radius: 8px;
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 16px;
+  margin-top: 40px;
+  color: white;
+}
+
+}  

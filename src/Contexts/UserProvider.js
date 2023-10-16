@@ -1,11 +1,11 @@
 import { createContext, useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 
 import { auth } from "../FireBaseApp";
+import { Redirect } from "react-router-dom";
 
 
 var UserContext = createContext({
@@ -31,12 +31,11 @@ var UserProvider = ({ children }) => {
   var localUser = localStorage.getItem(App_User);
   var [user, setUser] = useState(localUser ? JSON.parse(localUser) : null);
   var [error, setError] = useState(null);
-  var history = useHistory();
 
   var SaveUser = (res) => {
     localStorage.setItem(App_User, JSON.stringify(res));
     setUser(res);
-    history.push("/room");
+    if(error == false) return <Redirect to="/room"/>
   };
 
 

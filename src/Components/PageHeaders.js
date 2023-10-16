@@ -8,13 +8,13 @@ var PageHeaders = () => {
   var {  toggle } = useRoomContext();
 
   return (
-    <div className="bg-fuchsia-800 p-1">
-      <header className="flex justify-between  w-full">
+    <div className="MainDivPageHeaders">
+      <header className="MainHeaderPageHeader">
         <PageLinks to="/">
-          <p className="m-2 text-fuchsia-300 italic text-2xl ">Chit-Chat</p>
+          <p className="PageHomeLinkUI">Chit-Chat</p>
           </PageLinks> 
      
-        <nav className="flex gap-4 text-fuchsia-300 italic flex-wrap m-2 hover:pointer">
+        <nav className="NavPageHeaderUI">
   
           {user ? (
             <>
