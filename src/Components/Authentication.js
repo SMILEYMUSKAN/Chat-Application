@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { useUserContext } from "../Contexts/UserProvider";
 import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 
 
 var Authentication = ({ isLogin }) => {
   var [email, setEmail] = useState("");
   var [password, setPassword] = useState("");
+  var history = useHistory();
  
 
   var { clearErrors, user, error, doLogin, doSignUp } = useUserContext();
@@ -13,7 +16,7 @@ var Authentication = ({ isLogin }) => {
   var HandleSubmit = (event) => {
     event.preventDefault();
     (isLogin ? doLogin : doSignUp)(email, password);
-
+    history.push("/room")
   };
 
   if (user) return <Redirect to="/room" />;
