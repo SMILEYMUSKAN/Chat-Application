@@ -5,7 +5,7 @@ import { useRoomContext } from "../Contexts/RoomProvider";
 
 var PageHeaders = () => {
   var { user } = useUserContext();
-  var { room } = useRoomContext();
+  var {  toggle } = useRoomContext();
 
   return (
     <div className="bg-fuchsia-800 p-1">
@@ -20,7 +20,7 @@ var PageHeaders = () => {
             <>
               <p>{user.email}</p>
 
-             {room ? <PageLinks to="/chats" >Chats</PageLinks> :   <PageLinks to="/room" >Room</PageLinks>}
+             {toggle ? <PageLinks to="/chats" >Chats</PageLinks> :   <PageLinks to="/room" >Room</PageLinks>}
               <PageLinks to="/logout">LogOut</PageLinks>
               
 

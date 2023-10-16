@@ -10,14 +10,13 @@ import {
 } from "firebase/firestore";
 import { database } from "../FireBaseApp";
 import { useUserContext } from "../Contexts/UserProvider";
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { Redirect } from "react-router-dom";
 
 var ChatMessages = () => {
   var [Messages, setMessages] = useState("");
   var [chat, setChat] = useState([]);
   var { room, name } = useRoomContext();
   var { user } = useUserContext();
-
   var ChatsCollection = collection(database, "ChatsInfo");
 
   var saveChats = {
@@ -36,10 +35,10 @@ var ChatMessages = () => {
       })
       .catch((error) => console.log(":: Error ::", error));
   };
-  
+
   useEffect(() => {
-    setChat([])
-  }, [user.email])
+    setChat([]);
+  }, [user.email]);
 
   useEffect(() => {
     var DbQuery = query(
@@ -66,21 +65,46 @@ var ChatMessages = () => {
     setMessages(value);
   };
 
-  if(room == "") return <Redirect to="/room"/>
+  if (room == "") return <Redirect to="/room" />;
+
   return (
-    <div className="ChatMessagesUI">
-      <form onSubmit={HandleSubmitEvent} className="FromUI">
+    <div className="ChatMessagesUI" id="outer">
+      <form onSubmit={HandleSubmitEvent} className="FromUI" id="inner">
         <h1 className="RoomNameUI">{room}</h1>
         <span className="ChatSpanUI">
-          {chat.map((Docdata, idx) => (
-            <div key={idx}>
-              <p className="userNameUI">{Docdata.userName}</p>
-              <div className="MessagesUI">
-                <h1>{Docdata.chats}</h1>
-                <p className="CreateddAt">{Docdata.createdAt}</p>
+          <div>
+            {chat.map((Docdata, idx) => (
+              <div key={idx}>
+                <p
+                  className={
+                    user.email == Docdata.email ? "AnotherUsers" : "userNameUI"
+                  }
+                >
+                  {Docdata.userName}
+                </p>
+                <div className="MessagesUI">
+                  <span
+                    className={
+                      user.email == Docdata.email
+                        ? "MessagesSpanUIUser"
+                        : "MessagesSpanUI"
+                    }
+                  >
+                    <h1>{Docdata.chats}</h1>
+                  </span>
+                  <p
+                    className={
+                      user.email == Docdata.email
+                        ? "CreatedAtUser"
+                        : "CreatedAt"
+                    }
+                  >
+                    {Docdata.createdAt}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </span>
         <section className="FormItemsUI">
           <input
@@ -90,13 +114,15 @@ var ChatMessages = () => {
             placeholder="Type a message"
             value={Messages}
           />
-          {Messages ? <button className='ButtonUI' type="submit">
-            Send
-          </button> : <button className='ButtonUI' type="submit" disabled={true}>
-            Send
-          </button>}
-          
-          
+          {Messages ? (
+            <button className="ButtonUI" type="submit">
+              Send
+            </button>
+          ) : (
+            <button className="ButtonUI" type="submit" disabled={true}>
+              Send
+            </button>
+          )}
         </section>
       </form>
     </div>

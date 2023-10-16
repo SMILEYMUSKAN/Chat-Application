@@ -9,7 +9,7 @@ var LogOut = () => {
   useEffect(() => {
     LogOut();
     localStorage.clear();
-    history.push("/login");
+    history.push("/");
   }, []);
 
   return null;

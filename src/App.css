@@ -12,7 +12,7 @@
   border-radius: 12px;
   margin-top: 2px;
   box-shadow: 1px 1px 2px black;
-  
+  position: relative;
 }
 
 .FromUI{
@@ -23,11 +23,8 @@
   margin-top: 1em;
   border-radius: 8px;
   background-color: white;
-  overflow: scroll;
   scrollbar-width: thin;
-  overflow-x: hidden; 
   position: relative;
-  
 }
 
 .FormItemsUI{
@@ -76,27 +73,51 @@
   max-height: 1000vh;
   flex-direction: column;
   position: relative;
+
 }
 
 .MessagesUI{
-  border: 1px solid rgb(168, 9, 168);
   display: flex;
   flex-wrap: wrap;
-  width:300px;
+  width: fit-content;
   margin-bottom: 1em;
-  border-radius: 2px 100px 100px 40px;
-  text-align: center;
   padding: 10px;
   position: relative;
 }
 
-.CreateddAt{
-  font-size: 10px;
+.MessagesSpanUI{
+  border: 1px solid rgb(168, 9, 168);
+  width: fit-content;
+  border-radius: 0px 10px 10px 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding: 5px;
+}
+
+.MessagesSpanUIUser{
+  border: 1px solid rgb(168, 9, 168);
+  width: fit-content;
+  border-radius: 10px 0px 10px 10px;
+  text-align: center;
+  padding-top: 20px;
+  padding: 5px;
   position: absolute;
-  bottom: 0;
-  right:0;
-  margin-right: 20px;
- 
+  right: 0;
+  margin-top: 1em;
+}
+
+.CreatedAt{
+  font-size: 10px;
+  margin-top: 3.50em;
+  color: rgb(168, 9, 168);
+  margin-left: 5px;
+}
+
+.CreatedAtUser{
+  font-size: 10px;
+  margin-top: 5.50em;
+  margin-left: 55em;
+  color: rgb(168, 9, 168);
 }
 
 .RoomNameUI{
@@ -110,6 +131,12 @@
   color:rgb(168, 9, 168)
 }
 
+.AnotherUsers{
+ position: absolute;
+ right: 0;
+ color:rgb(168, 9, 168);
+ 
+}
 .HomePageUI{
   text-align: center;
   font-size: 60px;
@@ -120,5 +147,13 @@
 .ButtonSectionUI{
   margin-left: 36em;
   margin-top: 2em;
+}
+
+#outer{
+  overflow: hidden;
+}
+
+#inner{
+  overflow-y: auto;
 }
 

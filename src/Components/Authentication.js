@@ -20,6 +20,8 @@ var Authentication = ({ isLogin }) => {
 
   useEffect(() => {
     clearErrors();
+    setEmail("");
+    setPassword("");
   }, [isLogin]);
 
 

@@ -7,6 +7,7 @@ var RoomProvider = ({ children }) => {
   var [room, setRoom] = useState("");
   var [name, setName] = useState("");
   var [toggle, setToggle] = useState(false);
+ 
 
   var history = useHistory();
   
@@ -31,6 +32,7 @@ var RoomProvider = ({ children }) => {
     setName(value);
   };
 
+
   return (
     <RoomContext.Provider
       value={{
@@ -40,7 +42,9 @@ var RoomProvider = ({ children }) => {
         name,
         room,
         setRoom,
-        toggle
+        toggle,
+        err
+        
       }}
     >
       {children}
