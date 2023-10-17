@@ -305,12 +305,91 @@ gap: 20px;
   transition: all 0.50s;
 }
 
+.ChatRoomMainDivUI{
+  width: 41.666667%;
+  height: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.ChatRommFormUI{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ChatRoomHeaderUI{
+ font-size: 30px;
+ line-height: 36px;
+ color : rgb(224, 47, 224);
+ margin-top: 24px;
+}
+
+.ChatRoomInputUI{
+  padding-bottom: 16px;
+  padding-left:16px;
+  padding-top:8px;
+  width:384px;
+  border-bottom: 2px solid rgb(224, 47, 224);
+  background-color: white;
+
+}
+
+.ChatRoomInputUI:focus{
+  outline:none;
+}
+
+
+.ChatRoomInputUIToggle{
+  padding-bottom: 16px;
+  padding-left:16px;
+  padding-top:8px;
+  width:384px;
+  border-bottom: 2px solid rgb(224, 47, 224);
+  background-color: white;
+  color: white;
+}
+
+
+.ChatRoomInputUIToggle:focus{
+  outline: none;
+}
+.ChatRoomButtonUI{
+ background-color:rgb(224, 47, 224);
+ text-align:center;
+ border-radius:8px;
+ width:384px;
+ padding:8px;
+ margin-top:40px;
+ color:white;
+}
+
+.ChatRoomButtonUI:hover{
+  background-color: rgb(187, 48, 187);
+  transition: all 0.50s;
+  box-shadow:1px 1px 1px black;
+}
+
+.ChatRoomParaUI{
+  color:rgb(199, 31, 199);
+  font-size:15px;
+}
 /*bg-fuchsia-500 text-center rounded w-96 p-2 mt-10 mb-4 text-white transition hover:bg-fuchsia-700 shadow*/
+/*style={{ color: "rgb(199, 31, 199)", fontSize: "15px" }}*/
 /*
+5-20px
 4-16px
 2-8px
+6-24px 
 96-384px
 10-40px
+5/12- width: 41.666667%;
+3xl-font-size: 1.875rem; /* 30px */
+  /*line-height: 2.25rem;  36px 
 */
 @media screen and (max-width: 567px){
 .HomePageUI{
@@ -408,4 +487,197 @@ line-height:20px;
   color: white;
 }
 
+.ChatRoomHeaderUI{
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.ChatRoomInputUI{
+  padding-bottom: 12px;
+  padding-left:12px;
+  padding-top:4px;
+  width:300px;
+  background-color: white;
+  border-bottom: 2px solid rgb(224, 47, 224);
+}
+
+.ChatRoomInputUIToggle{
+  padding-bottom: 12px;
+  padding-left:12px;
+  padding-top:4px;
+  width:300px;
+  background-color: white;
+  color: white;
+  border-bottom: 2px solid rgb(224, 47, 224);
+}
+
+.ChatRoomInputUIToggle:focus{
+  outline: none;
+}
+
+.ChatRoomInputUI:focus{
+  outline:none;
+}
+
+.ChatRoomButtonUI{
+  background-color:rgb(224, 47, 224);
+  text-align:center;
+  border-radius:8px;
+  width:300px;
+  padding:5px;
+  margin-top:40px;
+  color:white;
+ }
+
+ .ChatRoomParaUI{
+  font-size: 12px;
+ }
+
+ .ChatMessagesUI{
+  border: 1px solid rgb(168, 9, 168);
+  width: 85vw;
+  height: 75vh;
+  margin: auto;
+  background-color:white;
+  border-radius: 12px;
+  margin-top: 1em;
+  box-shadow: 1px 1px 2px black;
+  position: relative;
+  }
+
+  .FromUI{
+    width: 85vw;
+    height: 75vh;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 8px;
+    background-color: white;
+    scrollbar-width: thin;
+    position: relative;
+    }
+    
+
+  .FormItemsUI{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap:1em;
+    margin-bottom: 20px;
+    position:none;
+    }
+
+   .InputUI{
+   padding: 5px; 
+   width: 55vw;
+   margin-left: 5px;
+   padding-left: 35px;
+   border: 1px solid rgb(168, 9, 168);
+   border-radius: 8px;
+   }
+   
+   .InputUI:focus{
+   outline: none;
+   }
+   
+.ButtonUI{
+  background-color: rgb(168, 9, 168);
+  width: 20vw;
+  border-radius: 8px;
+  margin-right: 10px;
+  color:white;
+  }
+  
+  
+  .ButtonUI:hover{
+  background-color:rgb(199, 31, 199);
+  box-shadow: 1px 1px 1px grey;
+  transition: all 1s;
+  }
+
+  .ChatSpanUI{
+    margin : 0em;
+    margin-left: 10px;
+    display: flex;
+    width: 55vw;
+    min-height: 70vh;
+    max-height: 1000vh;
+    flex-direction: column;
+    position: relative;
+    }
+    
+    .MessagesUI{
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-bottom: 2px;
+    padding: 2px;
+    position: relative;
+    }
+
+    
+ .MessagesSpanUI{
+  border: 1px solid rgb(168, 9, 168);
+  width: fit-content;
+  border-radius: 0px 10px 10px 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding: 5px;
+  margin-right: 5em;
+  }
+  
+  .MessagesSpanUIUser{
+    border: 1px solid rgb(168, 9, 168);
+    width: fit-content;
+    border-radius: 0px 10px 10px 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding: 5px;
+    position: absolute;
+    left:0
+  }
+
+  .CreatedAt{
+    font-size: 10px;
+    margin-top: 3.50em;
+    color: rgb(168, 9, 168);
+    margin-left: 5px;
+    }
+    
+    .CreatedAtUser{
+    font-size: 10px;
+    margin-top: 5.50em;
+    margin-left: 20px;
+    color: rgb(168, 9, 168);
+    }
+    
+  
 }  
+
+/*
+.ChatMessagesUI{
+border: 1px solid rgb(168, 9, 168);
+width: 70vw;
+height: 91vh;
+margin: auto;
+background-color:rgb(168, 9, 168);
+border-radius: 12px;
+margin-top: 2px;
+box-shadow: 1px 1px 2px black;
+position: relative;
+}
+
+.FromUI{
+width: 55vw;
+height: 85vh;
+border: 1px solid white;
+margin: auto;
+margin-top: 1em;
+border-radius: 8px;
+background-color: white;
+scrollbar-width: thin;
+position: relative;
+}
+
+*/
