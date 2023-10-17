@@ -35,7 +35,6 @@ var UserProvider = ({ children }) => {
   var SaveUser = (res) => {
     localStorage.setItem(App_User, JSON.stringify(res));
     setUser(res);
-    if(error == false) return <Redirect to="/room"/>
   };
 
 

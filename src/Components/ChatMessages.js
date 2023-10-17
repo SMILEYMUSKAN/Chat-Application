@@ -65,8 +65,7 @@ var ChatMessages = () => {
     setMessages(value);
   };
 
-  if (room == "") return <Redirect to="/room" />;
-
+  //if (room == "") return <Redirect to="/room" />;
   return (
     <div className="ChatMessagesUI" id="outer">
       <form onSubmit={HandleSubmitEvent} className="FromUI" id="inner">
