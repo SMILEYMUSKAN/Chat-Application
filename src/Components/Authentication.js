@@ -18,7 +18,6 @@ var Authentication = ({ isLogin }) => {
      
   };
 
-  if (user) return <Redirect to="/room" />;
 
   useEffect(() => {
     clearErrors();
@@ -28,6 +27,7 @@ var Authentication = ({ isLogin }) => {
 
 
   var title = isLogin ? <h1>Login</h1> : <h1>SignUp</h1>;
+  if (user) return <Redirect to="/room" />;
   return (
     <div  className="AuthenticationMainDiv">
   

@@ -15,7 +15,7 @@ import { Redirect } from "react-router-dom";
 var ChatMessages = () => {
   var [Messages, setMessages] = useState("");
   var [chat, setChat] = useState([]);
-  var { room, name } = useRoomContext();
+  var { room, name, setToggle, setRoom, setName, toggle } = useRoomContext();
   var { user } = useUserContext();
   var ChatsCollection = collection(database, "ChatsInfo");
 
@@ -30,7 +30,7 @@ var ChatMessages = () => {
   var HandleSubmitEvent = (event) => {
     event.preventDefault();
     addDoc(ChatsCollection, saveChats)
-      .then((DOC) => {
+      .then(() => {
         setMessages("");
       })
       .catch((error) => console.log(":: Error ::", error));
@@ -38,6 +38,7 @@ var ChatMessages = () => {
 
   useEffect(() => {
     setChat([]);
+    setToggle(false);
   }, [user.email]);
 
   useEffect(() => {
@@ -66,11 +67,11 @@ var ChatMessages = () => {
   };
 
   if (room == "") return <Redirect to="/room" />;
-
   return (
     <div className="ChatMessagesUI" id="outer">
       <form onSubmit={HandleSubmitEvent} className="FromUI" id="inner">
         <h1 className="RoomNameUI">{room}</h1>
+       
         <span className="ChatSpanUI">
           <div>
             {chat.map((Docdata, idx) => (
@@ -80,7 +81,7 @@ var ChatMessages = () => {
                     user.email == Docdata.email ? "AnotherUsers" : "userNameUI"
                   }
                 >
-                  {Docdata.userName}
+                 {Docdata.userName}
                 </p>
                 <div className="MessagesUI">
                   <span

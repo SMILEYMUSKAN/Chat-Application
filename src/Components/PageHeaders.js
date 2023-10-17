@@ -3,9 +3,12 @@ import { useUserContext } from "../Contexts/UserProvider";
 import { useRoomContext } from "../Contexts/RoomProvider";
 
 
+
 var PageHeaders = () => {
   var { user } = useUserContext();
   var {  toggle } = useRoomContext();
+
+
 
   return (
     <div className="MainDivPageHeaders">
@@ -18,20 +21,22 @@ var PageHeaders = () => {
   
           {user ? (
             <>
-              <p>{user.email}</p>
+              <p className="email">{user.email}</p>
 
-             {toggle ? <PageLinks to="/chats" >Chats</PageLinks> :   <PageLinks to="/room" >Room</PageLinks>}
+             {toggle ? <PageLinks to="/chats" className="chat">Chats</PageLinks> :   <PageLinks to="/room" className="room">Room</PageLinks>}
+             <p className="logout">
               <PageLinks to="/logout">LogOut</PageLinks>
-              
+              </p>
 
             </>
           ) : (
             <>
-              <PageLinks to="/login" >Login</PageLinks>
-              <PageLinks to="/signup">SignUp</PageLinks>
+              <PageLinks to="/login" className="login">Login</PageLinks>
+              <PageLinks to="/signup" className="signup">SignUp</PageLinks>
             </>
           )}
         </nav>
+        
       </header>
     </div>
   );

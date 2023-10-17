@@ -42,8 +42,9 @@ var RoomProvider = ({ children }) => {
         name,
         room,
         setRoom,
-        toggle
-        
+        setName,
+        toggle,
+        setToggle,
       }}
     >
       {children}
