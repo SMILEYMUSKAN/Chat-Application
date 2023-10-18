@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useUserContext } from "../Contexts/UserProvider";
+import { UseUserContext } from "../Contexts/UserProvider";
 import { useHistory } from "react-router-dom";
 
 var LogOut = () => {
   var history = useHistory();
-  var { LogOut } = useUserContext();
+  var { LogOut } = UseUserContext();
 
   useEffect(() => {
     LogOut();

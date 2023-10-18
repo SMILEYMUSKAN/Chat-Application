@@ -86,5 +86,5 @@ var UserProvider = ({ children }) => {
   );
 };
 
-export var useUserContext = () => useContext(UserContext);
+export var UseUserContext = () => useContext(UserContext);
 export default UserProvider;

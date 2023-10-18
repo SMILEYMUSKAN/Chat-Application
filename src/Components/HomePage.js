@@ -1,11 +1,11 @@
 import { useHistory } from "react-router-dom";
-import { useUserContext } from "../Contexts/UserProvider";
+import { UseUserContext } from "../Contexts/UserProvider";
 import { Redirect } from "react-router-dom";
 
 
 var HomePage = () => {
   var history = useHistory();
-  var { user } = useUserContext();
+  var { user } = UseUserContext();
   
   var OnClickLoginHandler = () => {
     history.push("/login");

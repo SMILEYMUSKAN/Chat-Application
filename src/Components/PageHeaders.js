@@ -1,10 +1,10 @@
 import PageLinks from "./PageLinks";
-import { useUserContext } from "../Contexts/UserProvider";
-import { useRoomContext } from "../Contexts/RoomProvider";
+import { UseUserContext } from "../Contexts/UserProvider";
+import { UseRoomContext } from "../Contexts/RoomProvider";
 
 var PageHeaders = () => {
-  var { user } = useUserContext();
-  var { toggle } = useRoomContext();
+  var { user } = UseUserContext();
+  var { toggle } = UseRoomContext();
 
   return (
     <div className="MainDivPageHeaders">

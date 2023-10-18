@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useUserContext } from "../Contexts/UserProvider";
+import { UseUserContext } from "../Contexts/UserProvider";
 import { Redirect } from "react-router-dom";
 
 
@@ -10,7 +10,7 @@ var Authentication = ({ isLogin }) => {
   var [password, setPassword] = useState("");
  
 
-  var { clearErrors, user, error, doLogin, doSignUp } = useUserContext();
+  var { clearErrors, user, error, doLogin, doSignUp } = UseUserContext();
 
   var HandleSubmit = (event) => {
     event.preventDefault();

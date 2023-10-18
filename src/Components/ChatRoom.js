@@ -1,6 +1,6 @@
 import { Redirect } from "react-router-dom";
-import { useRoomContext } from "../Contexts/RoomProvider";
-import { useUserContext } from "../Contexts/UserProvider";
+import { UseRoomContext } from "../Contexts/RoomProvider";
+import { UseUserContext } from "../Contexts/UserProvider";
 import { useEffect } from "react";
 
 var chatRoom = () => {
@@ -13,8 +13,8 @@ var chatRoom = () => {
     toggle,
     setName,
     setRoom,
-  } = useRoomContext();
-  var { user } = useUserContext();
+  } = UseRoomContext();
+  var { user } = UseUserContext();
 
   useEffect(() => {
     setName("");

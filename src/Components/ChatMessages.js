@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useRoomContext } from "../Contexts/RoomProvider";
+import { UseRoomContext } from "../Contexts/RoomProvider";
 import {
   addDoc,
   collection,
@@ -9,14 +9,14 @@ import {
   where,
 } from "firebase/firestore";
 import { database } from "../FireBaseApp";
-import { useUserContext } from "../Contexts/UserProvider";
+import { UseUserContext } from "../Contexts/UserProvider";
 import { Redirect } from "react-router-dom";
 
 var ChatMessages = () => {
   var [Messages, setMessages] = useState("");
   var [chat, setChat] = useState([]);
-  var { room, name, setToggle, HandleLogOut } = useRoomContext();
-  var { user } = useUserContext();
+  var { room, name, setToggle, HandleLogOut } = UseRoomContext();
+  var { user } = UseUserContext();
   var ChatsCollection = collection(database, "ChatsInfo");
 
   var saveChats = {

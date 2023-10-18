@@ -56,5 +56,5 @@ var RoomProvider = ({ children }) => {
   );
 };
 
-export var useRoomContext = () => useContext(RoomContext);
+export var UseRoomContext = () => useContext(RoomContext);
 export default RoomProvider;
