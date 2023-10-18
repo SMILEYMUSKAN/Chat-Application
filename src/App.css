@@ -314,7 +314,10 @@ gap: 20px;
   justify-content: start;
   margin: auto;
   border-radius: 8px;
+<<<<<<< HEAD
   margin-top: 2em;
+=======
+>>>>>>> refs/remotes/origin/main
 }
 
 .ChatRommFormUI{
@@ -345,6 +348,23 @@ gap: 20px;
 }
 
 
+<<<<<<< HEAD
+=======
+.ChatRoomInputUIToggle{
+  padding-bottom: 16px;
+  padding-left:16px;
+  padding-top:8px;
+  width:384px;
+  border-bottom: 2px solid rgb(224, 47, 224);
+  background-color: white;
+  color: white;
+}
+
+
+.ChatRoomInputUIToggle:focus{
+  outline: none;
+}
+>>>>>>> refs/remotes/origin/main
 .ChatRoomButtonUI{
  background-color:rgb(224, 47, 224);
  text-align:center;
@@ -365,6 +385,7 @@ gap: 20px;
   color:rgb(199, 31, 199);
   font-size:15px;
 }
+<<<<<<< HEAD
 
 .ChatMessageFormDiv{
   display: flex;
@@ -392,6 +413,21 @@ gap: 20px;
   }
 
 
+=======
+/*bg-fuchsia-500 text-center rounded w-96 p-2 mt-10 mb-4 text-white transition hover:bg-fuchsia-700 shadow*/
+/*style={{ color: "rgb(199, 31, 199)", fontSize: "15px" }}*/
+/*
+5-20px
+4-16px
+2-8px
+6-24px 
+96-384px
+10-40px
+5/12- width: 41.666667%;
+3xl-font-size: 1.875rem; /* 30px */
+  /*line-height: 2.25rem;  36px 
+*/
+>>>>>>> refs/remotes/origin/main
 @media screen and (max-width: 567px){
 .HomePageUI{
 font-size: 40px;
@@ -523,6 +559,23 @@ line-height:20px;
   border-bottom: 2px solid rgb(224, 47, 224);
 }
 
+<<<<<<< HEAD
+=======
+.ChatRoomInputUIToggle{
+  padding-bottom: 12px;
+  padding-left:12px;
+  padding-top:4px;
+  width:300px;
+  background-color: white;
+  color: white;
+  border-bottom: 2px solid rgb(224, 47, 224);
+}
+
+.ChatRoomInputUIToggle:focus{
+  outline: none;
+}
+
+>>>>>>> refs/remotes/origin/main
 .ChatRoomInputUI:focus{
   outline:none;
 }
@@ -542,6 +595,7 @@ line-height:20px;
  }
 
  .ChatMessagesUI{
+<<<<<<< HEAD
   position: none;
   border: 1px solid black;
   width: 100vw;
@@ -627,37 +681,112 @@ line-height:20px;
   
    }
 
+=======
+  border: 1px solid rgb(168, 9, 168);
+  width: 85vw;
+  height: 75vh;
+  margin: auto;
+  background-color:white;
+  border-radius: 12px;
+  margin-top: 1em;
+  box-shadow: 1px 1px 2px black;
+  position: relative;
+  }
+
+  .FromUI{
+    width: 85vw;
+    height: 75vh;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 8px;
+    background-color: white;
+    scrollbar-width: thin;
+    position: relative;
+    }
+    
+
+  .FormItemsUI{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap:1em;
+    margin-bottom: 20px;
+    position:none;
+    }
+
+   .InputUI{
+   padding: 5px; 
+   width: 55vw;
+   margin-left: 5px;
+   padding-left: 35px;
+   border: 1px solid rgb(168, 9, 168);
+   border-radius: 8px;
+   }
+>>>>>>> refs/remotes/origin/main
    
    .InputUI:focus{
    outline: none;
    }
    
 .ButtonUI{
+<<<<<<< HEAD
   background-color: rgb(209, 43, 209);
   width: 80px;
   border-radius: 6px;
   margin-right: 0px;
+=======
+  background-color: rgb(168, 9, 168);
+  width: 20vw;
+  border-radius: 8px;
+  margin-right: 10px;
+>>>>>>> refs/remotes/origin/main
   color:white;
   }
   
   
   .ButtonUI:hover{
+<<<<<<< HEAD
   background-color:rgb(175, 26, 175);
   box-shadow: 1px 1px 1px black;
   transition: all 1s;
   }
+=======
+  background-color:rgb(199, 31, 199);
+  box-shadow: 1px 1px 1px grey;
+  transition: all 1s;
+  }
+
+  .ChatSpanUI{
+    margin : 0em;
+    margin-left: 10px;
+    display: flex;
+    width: 55vw;
+    min-height: 70vh;
+    max-height: 1000vh;
+    flex-direction: column;
+    position: relative;
+    }
+>>>>>>> refs/remotes/origin/main
     
     .MessagesUI{
     display: flex;
     flex-wrap: wrap;
     width: fit-content;
+<<<<<<< HEAD
     margin-bottom: 10px;
     padding:5px;
 
+=======
+    margin-bottom: 2px;
+    padding: 2px;
+    position: relative;
+>>>>>>> refs/remotes/origin/main
     }
 
     
  .MessagesSpanUI{
+<<<<<<< HEAD
   border: 1px solid rgb(209, 43, 209);
   width: fit-content;
   border-radius: 0px 10px 10px 20px;
@@ -718,3 +847,68 @@ line-height:20px;
 
     
 }  
+=======
+  border: 1px solid rgb(168, 9, 168);
+  width: fit-content;
+  border-radius: 0px 10px 10px 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding: 5px;
+  margin-right: 5em;
+  }
+  
+  .MessagesSpanUIUser{
+    border: 1px solid rgb(168, 9, 168);
+    width: fit-content;
+    border-radius: 0px 10px 10px 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding: 5px;
+    position: absolute;
+    left:0
+  }
+
+  .CreatedAt{
+    font-size: 10px;
+    margin-top: 3.50em;
+    color: rgb(168, 9, 168);
+    margin-left: 5px;
+    }
+    
+    .CreatedAtUser{
+    font-size: 10px;
+    margin-top: 5.50em;
+    margin-left: 20px;
+    color: rgb(168, 9, 168);
+    }
+    
+  
+}  
+
+/*
+.ChatMessagesUI{
+border: 1px solid rgb(168, 9, 168);
+width: 70vw;
+height: 91vh;
+margin: auto;
+background-color:rgb(168, 9, 168);
+border-radius: 12px;
+margin-top: 2px;
+box-shadow: 1px 1px 2px black;
+position: relative;
+}
+
+.FromUI{
+width: 55vw;
+height: 85vh;
+border: 1px solid white;
+margin: auto;
+margin-top: 1em;
+border-radius: 8px;
+background-color: white;
+scrollbar-width: thin;
+position: relative;
+}
+
+*/
+>>>>>>> refs/remotes/origin/main
