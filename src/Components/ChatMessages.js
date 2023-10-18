@@ -15,7 +15,7 @@ import { Redirect } from "react-router-dom";
 var ChatMessages = () => {
   var [Messages, setMessages] = useState("");
   var [chat, setChat] = useState([]);
-  var { room, name, setToggle, setRoom, setName, toggle } = useRoomContext();
+  var { room, name, setToggle, HandleLogOut, toggle } = useRoomContext();
   var { user } = useUserContext();
   var ChatsCollection = collection(database, "ChatsInfo");
 
@@ -65,17 +65,21 @@ var ChatMessages = () => {
     } = event;
     setMessages(value);
   };
-
+  
+  if(name == "") return <Redirect to="/room"/>
   if (room == "") return <Redirect to="/room" />;
+  
   return (
-    <div className="ChatMessagesUI" id="outer">
-      <form onSubmit={HandleSubmitEvent} className="FromUI" id="inner">
+    <div className="ChatMessagesUI">
+      <form onSubmit={HandleSubmitEvent} className="FromUI" >
+        <div className="ChatMessageFormDiv">
         <h1 className="RoomNameUI">{room}</h1>
-       
-        <span className="ChatSpanUI">
+        <button onClick={HandleLogOut} className="ChatMessageLogOutUI">Exit Chat</button>
+        </div>
+        <span className="ChatSpanUI" id="inner">
           <div>
             {chat.map((Docdata, idx) => (
-              <div key={idx}>
+              <div key={idx} className="EachCategoery">
                 <p
                   className={
                     user.email == Docdata.email ? "AnotherUsers" : "userNameUI"
@@ -84,15 +88,15 @@ var ChatMessages = () => {
                  {Docdata.userName}
                 </p>
                 <div className="MessagesUI">
-                  <span
+                  <div
                     className={
                       user.email == Docdata.email
                         ? "MessagesSpanUIUser"
                         : "MessagesSpanUI"
                     }
                   >
-                    <h1>{Docdata.chats}</h1>
-                  </span>
+                    <h1 className="ChatMessagesUICon">{Docdata.chats}</h1>
+                  </div>
                   <p
                     className={
                       user.email == Docdata.email

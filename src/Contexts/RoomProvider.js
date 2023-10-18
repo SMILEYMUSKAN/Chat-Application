@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 var RoomContext = createContext({});
 
@@ -7,10 +8,8 @@ var RoomProvider = ({ children }) => {
   var [room, setRoom] = useState("");
   var [name, setName] = useState("");
   var [toggle, setToggle] = useState(false);
- 
 
   var history = useHistory();
-  
 
   var HandleOnSubmit = (event) => {
     event.preventDefault();
@@ -32,6 +31,10 @@ var RoomProvider = ({ children }) => {
     setName(value);
   };
 
+  var HandleLogOut = () => {
+    setName("");
+    return <Redirect to="/room" />;
+  };
 
   return (
     <RoomContext.Provider
@@ -39,6 +42,7 @@ var RoomProvider = ({ children }) => {
         HandleOnSubmit,
         HandleOnChange,
         HandleOnChangeName,
+        HandleLogOut,
         name,
         room,
         setRoom,

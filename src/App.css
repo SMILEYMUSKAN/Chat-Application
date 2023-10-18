@@ -23,7 +23,6 @@ margin: auto;
 margin-top: 1em;
 border-radius: 8px;
 background-color: white;
-scrollbar-width: thin;
 position: relative;
 }
 
@@ -120,12 +119,6 @@ margin-left: 55em;
 color: rgb(168, 9, 168);
 }
 
-.RoomNameUI{
-text-align: center;
-font-size: 25px;
-color:rgb(168, 9, 168);
-margin-top: 10px;
-}
 
 .userNameUI{
 color:rgb(168, 9, 168)
@@ -150,11 +143,17 @@ margin-top: 2em;
 }
 
 #outer{
-overflow: hidden;
+  overflow: hidden;
 }
 
 #inner{
+scrollbar-width: thin;
 overflow-y: auto;
+}
+
+.room:hover{
+  color:white;
+  transition: all 0.50s;
 }
 
 
@@ -365,6 +364,30 @@ gap: 20px;
   font-size:15px;
 }
 
+.ChatMessageFormDiv{
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.ChatMessageLogOutUI{
+  color: rgb(168, 9, 168);
+  width: 96px;
+  padding: 1px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.ChatMessageLogOutUI:hover{
+  border: 1px solid rgb(163, 31, 163);
+  box-shadow: 1px 1px 1px black;
+  transition: all 1s;
+}
+
+.RoomNameUI{
+  font-size: 25px;
+  color:rgb(168, 9, 168);
+   margin-left: 13em;
+  }
 
 
 @media screen and (max-width: 567px){
@@ -439,7 +462,7 @@ line-height:20px;
       display: none;
     }
 
-    .room{
+    #room{
       display: none;
     }
 
@@ -517,159 +540,179 @@ line-height:20px;
  }
 
  .ChatMessagesUI{
-  position: relative;
-  border: 1px solid rgb(168, 9, 168);
-  width: 85vw;
-  height: 75vh;
-  margin: auto;
+  position: none;
+  border: 1px solid black;
+  width: 100vw;
+  height: 100vh;
+  margin: none;
   background-color:white;
-  border-radius: 12px;
-  margin-top: 10px;
-  box-shadow: 1px 1px 2px black;
+  border-radius: 0px;
+  margin-top: 0px;
+  box-shadow: none;
   
   }
 
   .FromUI{
-    width: 85vw;
-    height: 75vh;
-    border: 1px solid white;
+    width: 95vw;
+    height: 85vh;
+    border:1px solid rgb(207, 33, 207);
     margin: auto;
-    margin-top: 1em;
+    margin-top: 2em;
     border-radius: 8px;
-    background-color: white;
-    scrollbar-width: thin;
-    position: relative;
-    margin-bottom: 2em;
+    background-color: none;
+    position: none;
+    margin-bottom: 0;
     }
     
+  #inner{
+    scrollbar-width: thin;
+    overflow-y: auto;
+  }
+  
+  
+.ChatMessageFormDiv{
+  display:flex;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 3em;
+}
+
+.RoomNameUI{
+   font-size: 25px;
+   color:rgb(168, 9, 168);
+   margin-left: 4.50em;
+  }
+
+  .ChatMessageLogOutUI{
+    width: 85px;
+    padding: 1px;
+    margin-left: 0px;
+  }
+  
+  .ChatMessageLogOutUI:hover{
+    border: 1px solid rgb(168, 9, 168);
+    box-shadow: 1px 1px 1px black;
+    transition: all 1s;
+  }
+  
+  .ChatSpanUI{
+    margin-right : auto;
+    margin-left: auto;
+    display: 0;
+    width: 90vw;
+    min-height: 65vh;
+    max-height: 0vh;
+    flex-direction: 0;
+    position: relative;
+    border: none;
+    }
 
   .FormItemsUI{
     display: flex;
-    gap:1em;
-    margin-top: 10em;
-    position:fixed;
+    gap:10px;
+    position:relative;
+     margin-top: 0px;
     }
 
    .InputUI{
-   padding: 5px; 
-   width: 55vw;
-   margin-left: 5px;
+   padding: 3px; 
+   width: 230px;
+   margin-left: 1em;
    padding-left: 35px;
-   border: 1px solid rgb(168, 9, 168);
-   border-radius: 8px;
+   border: 1px solid rgb(209, 43, 209);
+   border-radius: 6px;
+   color: black;
+  
    }
+
    
    .InputUI:focus{
    outline: none;
    }
    
 .ButtonUI{
-  background-color: rgb(168, 9, 168);
-  width: 20vw;
-  border-radius: 8px;
-  margin-right: 10px;
+  background-color: rgb(209, 43, 209);
+  width: 80px;
+  border-radius: 6px;
+  margin-right: 0px;
   color:white;
   }
   
   
   .ButtonUI:hover{
-  background-color:rgb(199, 31, 199);
-  box-shadow: 1px 1px 1px grey;
+  background-color:rgb(175, 26, 175);
+  box-shadow: 1px 1px 1px black;
   transition: all 1s;
   }
-
-  .ChatSpanUI{
-    margin : 0em;
-    margin-left: 10px;
-    display: flex;
-    width: 55vw;
-    min-height: 70vh;
-    max-height: 1000vh;
-    flex-direction: column;
-    position: relative;
-
-    }
     
     .MessagesUI{
     display: flex;
     flex-wrap: wrap;
     width: fit-content;
-    margin-bottom: 2px;
-    padding: 2px;
-    position: relative;
+    margin-bottom: 10px;
+    padding:5px;
+
     }
 
     
  .MessagesSpanUI{
-  border: 1px solid rgb(168, 9, 168);
+  border: 1px solid rgb(209, 43, 209);
   width: fit-content;
   border-radius: 0px 10px 10px 20px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
   padding: 5px;
-  margin-right: 5em;
+  margin-right: 5px;
   }
   
   .MessagesSpanUIUser{
-    border: 1px solid rgb(168, 9, 168);
+    border: 1px solid rgb(209, 43, 209);
     width: fit-content;
-    border-radius: 0px 10px 10px 20px;
+    border-radius: 10px 0px 10px 10px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     padding: 5px;
+    margin-top: 1.70em;
     position: absolute;
-    left:0
+    right: 0;
+    margin: 1em;
+    margin-top: 1.30em;
   }
+
+  .userNameUI{
+    color:rgb(209, 43, 209)
+    }
+    
+    .AnotherUsers{
+    position: absolute;
+    right: 0;
+    color:rgb(209, 43, 209);
+    margin-right: 1em;
+    margin-bottom: 2em;
+    
+    }
 
   .CreatedAt{
     font-size: 10px;
-    color: rgb(168, 9, 168);
-    margin-left: 5px;
+    color: rgb(209, 43, 209);
+    margin-left: 0px;
 
-    
     }
     
     .CreatedAtUser{
-    font-size: 10px;
-    margin-left: 20px;
-    color: rgb(168, 9, 168);
+    font-size:10px;
+    margin-left: 20em;
+    color:rgb(209, 43, 209);
+    margin-bottom: 0px;
+    padding-top: 10px;
     }
 
-    .userNameUI{
-      color:rgb(168, 9, 168)
-      }
-      
-      .AnotherUsers{
-      position: none;
-      color:rgb(168, 9, 168);
-      
-      }
+    .EachCategoery{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
     
 }  
-
-/*
-.ChatMessagesUI{
-border: 1px solid rgb(168, 9, 168);
-width: 70vw;
-height: 91vh;
-margin: auto;
-background-color:rgb(168, 9, 168);
-border-radius: 12px;
-margin-top: 2px;
-box-shadow: 1px 1px 2px black;
-position: relative;
-}
-
-.FromUI{
-width: 55vw;
-height: 85vh;
-border: 1px solid white;
-margin: auto;
-margin-top: 1em;
-border-radius: 8px;
-background-color: white;
-scrollbar-width: thin;
-position: relative;
-}
-
-*/
