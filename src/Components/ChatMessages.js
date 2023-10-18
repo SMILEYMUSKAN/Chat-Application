@@ -15,7 +15,7 @@ import { Redirect } from "react-router-dom";
 var ChatMessages = () => {
   var [Messages, setMessages] = useState("");
   var [chat, setChat] = useState([]);
-  var { room, name, setToggle, HandleLogOut, toggle } = useRoomContext();
+  var { room, name, setToggle, HandleLogOut } = useRoomContext();
   var { user } = useUserContext();
   var ChatsCollection = collection(database, "ChatsInfo");
 
@@ -69,10 +69,10 @@ var ChatMessages = () => {
   if(name == "") return <Redirect to="/room"/>
   if (room == "") return <Redirect to="/room" />;
   
-  return (
+  return ( 
     <div className="ChatMessagesUI">
       <form onSubmit={HandleSubmitEvent} className="FromUI" >
-        <div className="ChatMessageFormDiv">
+        <div className="ChatMessageFormDiv" >
         <h1 className="RoomNameUI">{room}</h1>
         <button onClick={HandleLogOut} className="ChatMessageLogOutUI">Exit Chat</button>
         </div>
