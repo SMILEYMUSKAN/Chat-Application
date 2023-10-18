@@ -65,7 +65,6 @@ var ChatMessages = () => {
     } = event;
     setMessages(value);
   };
-<<<<<<< HEAD
   
   if(name == "") return <Redirect to="/room"/>
   if (room == "") return <Redirect to="/room" />;
@@ -74,13 +73,6 @@ var ChatMessages = () => {
     <div className="ChatMessagesUI">
       <form onSubmit={HandleSubmitEvent} className="FromUI" >
         <div className="ChatMessageFormDiv" >
-=======
-
-  //if (room == "") return <Redirect to="/room" />;
-  return (
-    <div className="ChatMessagesUI" id="outer">
-      <form onSubmit={HandleSubmitEvent} className="FromUI" id="inner">
->>>>>>> refs/remotes/origin/main
         <h1 className="RoomNameUI">{room}</h1>
         <button onClick={HandleLogOut} className="ChatMessageLogOutUI">Exit Chat</button>
         </div>

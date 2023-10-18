@@ -25,7 +25,6 @@ var chatRoom = () => {
   return (
     <div className="ChatRoomMainDivUI">
       <form onSubmit={HandleOnSubmit} className="ChatRommFormUI">
-<<<<<<< HEAD
         <h1 className="ChatRoomHeaderUI">Create Your Room</h1>
 
         <input
@@ -49,7 +48,6 @@ var chatRoom = () => {
             Start Chat
           </button>
         )}
-=======
         <h1 className="ChatRoomHeaderUI">
           Create Your Room
         </h1>
@@ -122,7 +120,6 @@ var chatRoom = () => {
             Continue
           </button>
         )}
->>>>>>> refs/remotes/origin/main
       </form>
     </div>
   );
