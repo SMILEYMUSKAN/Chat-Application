@@ -3,7 +3,7 @@ import Authentication from "./Components/Authentication";
 import HomePage from "./Components/HomePage";
 import LogOut from "./Components/LogOut";
 import ChatMessages from "./Components/ChatMessages";
-import chatRoom from "./Components/ChatRoom";
+import ChatRoom from "./Components/ChatRoom";
 
 var AppRouter = () => {
   return (
@@ -20,7 +20,7 @@ var AppRouter = () => {
         />
         <Route path="/logout" component={LogOut} />
         <Route path="/chats" component={ChatMessages} />
-        <Route path="/room" component={chatRoom} />
+        <Route path="/room" component={ChatRoom} />
       </Switch>
     </div>
   );

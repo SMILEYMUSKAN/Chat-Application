@@ -3,7 +3,7 @@ import { UseRoomContext } from "../Contexts/RoomProvider";
 import { UseUserContext } from "../Contexts/UserProvider";
 import { useEffect } from "react";
 
-var chatRoom = () => {
+var ChatRoom = () => {
   var {
     HandleOnSubmit,
     HandleOnChange,
@@ -55,4 +55,4 @@ var chatRoom = () => {
   );
 };
 
-export default chatRoom;
+export default ChatRoom;
